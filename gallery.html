@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotós Portfólió - Galéria</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .gallery-section {
+            margin: 2rem 0;
+        }
+        .gallery-section h2 {
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            aspect-ratio: 1;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover::after {
+            opacity: 1;
+        }
+        .gallery-item figcaption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            color: white;
+            z-index: 1;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover figcaption {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">Kovács Péter Photography</a>
+                <nav>
+                    <a href="portfolio.html">Portfólió</a>
+                    <a href="biography.html">Rólam</a>
+                    <a href="services.html">Szolgáltatások</a>
+                    <a href="gallery.html">Galéria</a>
+                    <a href="contact.html">Kapcsolat</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container" style="margin-top: 100px;">
+            <h1>Galéria</h1>
+            
+            <section class="gallery-section">
+                <h2>Természetfotók</h2>
+                <div class="gallery-grid">
+                    <figure class="gallery-item">
+                        <img src="https://images.pexels.com/photos/1770809/pexels-photo-1770809.jpeg" alt="Napfelkelte a hegyek között">
+                        <figcaption>Napfelkelte a hegyek között</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="https://images.pexels.com/photos/1761279/pexels-photo-1761279.jpeg" alt="Őszi erdő">
+                        <figcaption>Őszi erdő</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="https://images.pexels.com/photos/1766838/pexels-photo-1766838.jpeg" alt="Tó tükröződés">
+                        <figcaption>Tó tükröződés</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="gallery-section">
+                <h2>Városi pillanatok</h2>
+                <div class="gallery-grid">
+                    <figure class="gallery-item">
+                        <img src="https://images.pexels.com/photos/3052361/pexels-photo-3052361.jpeg" alt="Városi éjszaka">
+                        <figcaption>Városi éjszaka</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="https://images.pexels.com/photos/1707820/pexels-photo-1707820.jpeg" alt="Építészeti részlet">
+                        <figcaption>Építészeti részlet</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="https://images.pexels.com/photos/1707819/pexels-photo-1707819.jpeg" alt="Modern építészet">
+                        <figcaption>Modern építészet</figcaption>
+                    </figure>
+                </div>
+            </section>
+
+            <section class="gallery-section">
+                <h2>Portrék</h2>
+                <div class="gallery-grid">
+                    <figure class="gallery-item">
+                        <img src="https://images.pexels.com/photos/2613260/pexels-photo-2613260.jpeg" alt="Művészi portré">
+                        <figcaption>Művészi portré</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="https://images.pexels.com/photos/2787341/pexels-photo-2787341.jpeg" alt="Természetes portré">
+                        <figcaption>Természetes portré</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="https://images.pexels.com/photos/2811087/pexels-photo-2811087.jpeg" alt="Karakteres portré">
+                        <figcaption>Karakteres portré</figcaption>
+                    </figure>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2023 Kovács Péter Photography. Minden jog fenntartva.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
